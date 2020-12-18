@@ -1,15 +1,21 @@
+#--------------------------------------------------------------------------------------------
+#  Copyright (c) Red Hat, Inc. All rights reserved.
+#  Licensed under the MIT License. See LICENSE in the project root for license information.
+#--------------------------------------------------------------------------------------------
+
 # Python programme to calculate the cost of traffolite nameplates
 
-l = float(input("Length : "))
-w = float(input("Width : "))
-t = float(input("Thickness : "))
-q = int(input("Quantity : "))
+l = float(input("Length    in mm: "))
+w = float(input("Width     in mm: "))
+t = float(input("Thickness in mm: "))
+q =   int(input("Quantity       : "))
 area = l * w
 
 cost = float(1)
 totalcost = float(1)
 perimeter = float(1)
 perimeter = 2 * (l + w)
+print("")
 
 if int(area) in range(1, 12500):
 
@@ -69,7 +75,7 @@ elif float(area) in range(801, 1600):
 else:
 
     print("Your number wasn't in the correct range")
-
+print("")
 print(f' Area of Rectangle      : {area} mm')
 print(' Perimeter of Rectangle : ', perimeter)
 print(f' Unit  Cost is                              : €{cost}')
